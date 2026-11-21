@@ -69,9 +69,12 @@ Board size, mounting holes and pad positions: [`hardware/BOM.md`](hardware/BOM.m
 | 2 × 60 cm | Tin-plated copper wire, Ø 0.8 mm | Length per wire before bending. Not silver-plated, see tip below |
 | 2 | AAA battery | 3 V total |
 | 2 + 2 | AAA battery contacts: 2× spring plate (−), 2× flat plate (+) | 9 × 14 mm, with solder tab. [AliExpress](https://www.aliexpress.com/item/32884289489.html) |
-| 2 | Screw M2 × 8 (or M2 × 12), countersunk, Phillips | Battery cover (DIN 965 / ISO 7046) |
-| 2 | Screw | Switch mounting ears. TODO: size |
-| 4 | Screw M2 | PCB (4 mounting holes, Ø 2.1 mm). TODO: length |
+| 2 | Machine screw M2 × 8 (or M2 × 12), countersunk, Phillips | Battery cover (DIN 965 / ISO 7046), screwed into heat-set inserts |
+| 2 | Heat-set insert M2 (Ø 3.0 mm outside, 3 or 4 mm long) | Melted into the printed part for the battery cover screws |
+| ~30 cm | Hook-up wire AWG 28 (Ø ≈ 0.32 mm) | Battery holder to J1/J5, switch to J4/J8, link between the two cells |
+| 2 | Self-tapping screw M2 × TODO, Phillips | Switch mounting ears |
+| 2 | Split lock washer M2 (spring washer, DIN 127) | Under the switch screws |
+| 4 | Self-tapping screw M2 × 6, Phillips | PCB (4 mounting holes, Ø 2.1 mm), screwed straight into the printed base |
 | 1 | Base + battery holder + cover | 3D printed, see below |
 
 <table align="center">
@@ -108,7 +111,7 @@ The `.3mf` files in `mechanics/print-profiles/` are set up for a **Bambu Lab H2D
 
    > **Tip:** When you order the PCB, panelize it. 5 × 4 = 20 boards per panel cost almost nothing extra, which is enough for *many* Christmas trees.
 
-2. **Print** the base, the battery holder and the cover.
+2. **Print** the base, the battery holder and the cover. Then press the two M2 heat-set inserts for the battery cover screws into place with a soldering iron.
 3. **Bend the wire pair.** Cut two 60 cm pieces of 0.8 mm tin-plated copper wire. **Straighten each piece first:** hold both ends with pliers and pull until the wire stretches slightly. That makes it perfectly straight and a little stiffer. Then bend both wires together so they stay parallel. Small pliers with round jaws make the tight turns at the tips of the branches easier.
 4. **Mark the polarity.** Decide which wire is + and which is − *before* soldering.
 5. **Solder the LEDs.** Put each LED with its longer leg (anode) on the + wire. Trim the legs and solder close to the LED body so it sits upright.
