@@ -108,7 +108,7 @@ The `.3mf` files in `mechanics/print-profiles/` are set up for a **Bambu Lab H2D
 
 ## Jigs
 
-Five printed jigs make the wire tree accurate and repeatable. The STL files are in [`mechanics/stl/jigs/`](mechanics/stl/jigs/).
+Five printed jigs make the wire tree accurate and repeatable. The STL files are in [`mechanics/stl/jigs/`](mechanics/stl/jigs/). They're easy to print: any material and any settings will do.
 
 | | Jig | Used for |
 |---|---|---|

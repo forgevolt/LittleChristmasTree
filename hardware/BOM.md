@@ -42,7 +42,7 @@ Order the PCB from `hardware/gerber/`, **or** build it on a piece of perfboard (
 
 - Supply: 3 V (2 × AAA)
 - All 11 LEDs are in parallel behind one 33 Ω resistor (R1).
-- TODO: measured average current, and from that the battery life (≈ battery capacity in mAh ÷ current in mA).
+- Battery life: the tree runs for a very long time on one set of AAA batteries (tested on the real tree).
 
 ## Board dimensions
 
