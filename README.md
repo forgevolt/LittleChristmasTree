@@ -9,8 +9,8 @@
 A small desk Christmas tree made of bent wire, eleven flickering LEDs and a 3D-printed "snow" base. The wire is both the frame and the circuit. No microcontroller, no firmware, just a switch, a resistor and two batteries.
 
 <p align="center">
-  <img src="images/tree.jpg" width="45%" alt="LittleChristmasTree, unlit" />
-  <img src="images/flicker.gif" width="35%" alt="LittleChristmasTree, LEDs flickering" />
+  <img src="images/tree.jpg" width="40%" alt="LittleChristmasTree, unlit" />
+  <img src="images/flicker.gif" width="40%" alt="LittleChristmasTree, LEDs flickering" />
 </p>
 
 ▶️ **Build video:** [youtube.com/@forgevolt](https://youtube.com/@forgevolt) <!-- TODO: replace with the direct video link -->
