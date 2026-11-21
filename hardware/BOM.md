@@ -1,6 +1,8 @@
 # Bill of materials
 
-## PCB (`hardware/gerber/`, 30.5 × 20 mm)
+## Board (30.5 × 20 mm)
+
+Order the PCB from `hardware/gerber/`, **or** build it on a piece of perfboard (prototype board): cut it to size, drill the mounting holes and wire it by hand following `hardware/schematic.pdf`. On perfboard, use a through-hole 33 Ω resistor (¼ W) instead of the 0805 SMD part.
 
 | Ref | Qty | Part | Manufacturer part | LCSC | Package |
 |---|---:|---|---|---|---|
