@@ -105,6 +105,9 @@ The `.3mf` files in `mechanics/print-profiles/` are set up for a **Bambu Lab H2D
 ## Build steps
 
 1. **Make the board.** Either order the PCB from the Gerber files, or use a piece of perfboard (prototype board): cut it to 30.48 × 20 mm (12 holes wide on standard 2.54 mm perfboard, about 8 holes tall), drill the mounting holes ([positions](hardware/BOM.md#board-dimensions)) and wire it by hand following the schematic. Then solder R1 and (optionally) the header pins. On perfboard a through-hole 33 Ω resistor is easier to solder than the 0805 SMD part.
+
+   > **Tip:** When you order the PCB, panelize it. 5 × 4 = 20 boards per panel cost almost nothing extra, which is enough for *many* Christmas trees.
+
 2. **Print** the base, the battery holder and the cover.
 3. **Bend the wire pair.** Cut two 60 cm pieces of 0.8 mm tin-plated copper wire. **Straighten each piece first:** hold both ends with pliers and pull until the wire stretches slightly. That makes it perfectly straight and a little stiffer. Then bend both wires together so they stay parallel. Small pliers with round jaws make the tight turns at the tips of the branches easier.
 4. **Mark the polarity.** Decide which wire is + and which is − *before* soldering.

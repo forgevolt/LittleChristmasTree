@@ -4,6 +4,8 @@
 
 Order the PCB from `hardware/gerber/`, **or** build it on a piece of perfboard (prototype board): cut it to 30.48 × 20 mm (12 holes wide on standard 2.54 mm perfboard, about 8 holes tall), drill the mounting holes and wire it by hand following `hardware/schematic.pdf`. On perfboard, use a through-hole 33 Ω resistor (¼ W) instead of the 0805 SMD part.
 
+> **Tip:** When you order the PCB, panelize it. 5 × 4 = 20 boards per panel cost almost nothing extra, which is enough for *many* Christmas trees.
+
 | Ref | Qty | Part | Manufacturer part | LCSC | Package |
 |---|---:|---|---|---|---|
 | R1 | 1 | Resistor 33 Ω | KOA RK73H2ATTD33R0F | [C317229](https://www.lcsc.com/product-detail/C317229.html) | 0805 |
