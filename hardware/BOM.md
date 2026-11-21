@@ -1,8 +1,8 @@
 # Bill of materials
 
-## Board (30.5 × 20 mm)
+## Board (30.48 × 20 mm)
 
-Order the PCB from `hardware/gerber/`, **or** build it on a piece of perfboard (prototype board): cut it to size, drill the mounting holes and wire it by hand following `hardware/schematic.pdf`. On perfboard, use a through-hole 33 Ω resistor (¼ W) instead of the 0805 SMD part.
+Order the PCB from `hardware/gerber/`, **or** build it on a piece of perfboard (prototype board): cut it to 30.48 × 20 mm (12 holes wide on standard 2.54 mm perfboard, about 8 holes tall), drill the mounting holes and wire it by hand following `hardware/schematic.pdf`. On perfboard, use a through-hole 33 Ω resistor (¼ W) instead of the 0805 SMD part.
 
 | Ref | Qty | Part | Manufacturer part | LCSC | Package |
 |---|---:|---|---|---|---|
@@ -31,7 +31,7 @@ Order the PCB from `hardware/gerber/`, **or** build it on a piece of perfboard (
 | 1 | Battery holder (`Body1`) + cover (`BatteryCover`) | 3D printed, `mechanics/print-profiles/BatteryHolderCover-*.3mf` |
 | 2 | Screw M2 × 8 (or M2 × 12), countersunk, Phillips | Battery cover. DIN 965 / ISO 7046 |
 | 2 | Screw | Switch mounting ears. TODO: size |
-| — | Screw | PCB. TODO: size and quantity |
+| 4 | Screw M2 | PCB (4 mounting holes, Ø 2.1 mm). TODO: length |
 | — | Thin stranded wire | From the battery holder to J1/J5 |
 
 ## Electrical notes
@@ -39,3 +39,28 @@ Order the PCB from `hardware/gerber/`, **or** build it on a piece of perfboard (
 - Supply: 3 V (2 × AAA)
 - All 11 LEDs are in parallel behind one 33 Ω resistor (R1).
 - TODO: measured average current, and from that the battery life (≈ battery capacity in mAh ÷ current in mA).
+
+## Board dimensions
+
+Board: **30.48 × 20 mm**, corner radius 2 mm. Positions are measured from the **bottom-left corner**, looking at the side with the labels (battery −/+ on the left, SW on the right).
+
+| Hole | Ø | X | Y |
+|---|---|---|---|
+| Mounting hole, bottom left | 2.1 mm | 5.08 mm | 3.65 mm |
+| Mounting hole, bottom right | 2.1 mm | 25.40 mm | 3.65 mm |
+| Mounting hole, top left | 2.1 mm | 5.08 mm | 16.35 mm |
+| Mounting hole, top right | 2.1 mm | 25.40 mm | 16.35 mm |
+
+The mounting holes are **20.32 mm apart horizontally** and **12.70 mm apart vertically**, both on the 2.54 mm grid (8 × 5 holes). On perfboard: pick one hole as the first mounting hole. The other three are 8 holes across and 5 holes up from it. Open those 4 holes up to 2.1 mm, then cut the board so that each mounting hole is 5.08 mm from the left or right edge and 3.65 mm from the top or bottom edge. The holes are centred on the board, so it comes out the same either way round.
+
+<details>
+<summary>Pad positions (Ø 0.89 mm)</summary>
+
+| Pad | X | Y |
+|---|---|---|
+| Battery (2 pads) | 1.52 mm | 7.91 / 12.09 mm |
+| Tree wires, left pair | 10.16 mm | 8.73 / 11.27 mm |
+| Tree wires, right pair | 20.32 mm | 8.73 / 11.27 mm |
+| Switch SW (2 pads) | 28.96 mm | 7.91 / 12.09 mm |
+
+</details>
