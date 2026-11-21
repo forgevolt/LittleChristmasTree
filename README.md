@@ -64,7 +64,7 @@ Board size, mounting holes and pad positions: [`hardware/BOM.md`](hardware/BOM.m
 |---:|---|---|
 | 11 | 3 mm flicker LED, clear lens, yellow | Self-flickering "candle" type. [AliExpress](https://www.aliexpress.com/item/1005007016428728.html), variant 3 mm / yellow |
 | 1 | Resistor 33 Ω, 0805 | KOA RK73H2ATTD33R0F, LCSC [C317229](https://www.lcsc.com/product-detail/C317229.html) |
-| 1 | Mini slide switch, SPDT, with mounting ears and solder lugs | Screwed into the top of the base, wired to J4/J8 <!-- TODO: source link --> |
+| 1 | Mini slide switch SS12F15, SPDT, with mounting ears and solder lugs | Screwed into the top of the base, wired to J4/J8. [AliExpress](https://www.aliexpress.com/item/10000003088863.html), or SHOU HAN SS12F15G5, LCSC [C2887260](https://www.lcsc.com/product-detail/C2887260.html) |
 | 8 | Header pin 1×1, 2.54 mm (optional) | LCSC [C81276](https://www.lcsc.com/product-detail/C81276.html). Wires can also be soldered straight to the pads |
 | 1 | PCB 30.48 × 20 mm (`hardware/gerber/`) **or** a piece of perfboard | Perfboard: cut to size and wire by hand |
 | 2 × 60 cm | Tin-plated copper wire, Ø 0.8 mm | Length per wire before bending. Not silver-plated, see tip below |

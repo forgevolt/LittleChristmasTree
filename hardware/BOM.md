@@ -9,7 +9,7 @@ Order the PCB from `hardware/gerber/`, **or** build it on a piece of perfboard (
 | Ref | Qty | Part | Manufacturer part | LCSC | Package |
 |---|---:|---|---|---|---|
 | R1 | 1 | Resistor 33 Ω | KOA RK73H2ATTD33R0F | [C317229](https://www.lcsc.com/product-detail/C317229.html) | 0805 |
-| SW1 | 1 | Mini slide switch ON/OFF, SPDT | Generic, with mounting ears and solder lugs. Not on the PCB: screwed into the base by its mounting ears and wired to J4/J8 (TODO: source link) | — | Panel mount |
+| SW1 | 1 | Mini slide switch ON/OFF, SPDT, SS12F15 type | SHOU HAN SS12F15G5, or any SS12F15 with mounting ears and solder lugs. Not on the PCB: screwed into the base by its mounting ears and wired to J4/J8. Source: [AliExpress](https://www.aliexpress.com/item/10000003088863.html) | [C2887260](https://www.lcsc.com/product-detail/C2887260.html) | Panel mount |
 | J1–J8 | 8 | Header pin 1×1, 2.54 mm (optional) | — | [C81276](https://www.lcsc.com/product-detail/C81276.html) | THT |
 
 ## Tree
