@@ -13,13 +13,15 @@
 | Qty | Part | Specification | Notes |
 |---:|---|---|---|
 | 11 | Flicker LED | 3 mm, clear lens, warm white / amber, self-flickering | TODO: part number / source |
-| ~2 m | Bare wire | Ø TODO mm, TODO material | Two parallel conductors |
+| 2 × 60 cm | Tin-plated copper wire | Ø 0.8 mm, bare | Length per wire before bending (1.2 m per tree). One wire is + and one is − |
+
+> **Wire tip:** Use **tin-plated copper wire**. Avoid **silver-plated** wire: the plating tends to flake off at the bends and tarnishes (turns dark) over time.
 
 ## Power and enclosure
 
 | Qty | Part | Notes |
 |---:|---|---|
-| 2 | AAA battery | 3 V <!-- TODO: confirm --> |
+| 2 | AAA battery | 3 V |
 | 1 | Base (`Housing`) | 3D printed, `mechanics/print-profiles/Base-*.3mf` |
 | 1 | Battery holder (`Body1`) + cover (`BatteryCover`) | 3D printed, `mechanics/print-profiles/BatteryHolderCover-*.3mf` |
 | — | Screws | TODO: size and quantity |

@@ -59,10 +59,12 @@ Full schematic: [`hardware/schematic.pdf`](hardware/schematic.pdf)
 | 1 | Slide switch | Kinghelm KH-SS12F17-G5, LCSC [C5274464](https://www.lcsc.com/product-detail/C5274464.html) |
 | 8 | Header pin 1×1, 2.54 mm (optional) | LCSC [C81276](https://www.lcsc.com/product-detail/C81276.html). Wires can also be soldered straight to the pads |
 | 1 | PCB, 30.5 × 20 mm | `hardware/gerber/` |
-| ~2 m | Bare wire, Ø TODO mm | Stiff enough to hold its shape |
-| 2 | AAA battery | 3 V total <!-- TODO: confirm battery type --> |
+| 2 × 60 cm | Tin-plated copper wire, Ø 0.8 mm | Length per wire before bending. Not silver-plated, see tip below |
+| 2 | AAA battery | 3 V total |
 | — | Screws | TODO: size and quantity for the PCB and the battery cover |
 | 1 | Base + battery holder + cover | 3D printed, see below |
+
+> **Wire tip:** Use **tin-plated copper wire**. Avoid **silver-plated** wire: the plating tends to flake off at the bends and tarnishes (turns dark) over time.
 
 Details and notes: [`hardware/BOM.md`](hardware/BOM.md)
 
@@ -86,7 +88,7 @@ The `.3mf` files in `mechanics/print-profiles/` are set up for a **Bambu Lab H2D
 
 1. **Order the PCB** from the Gerber files and solder R1, SW1 and (optionally) the header pins.
 2. **Print** the base, the battery holder and the cover.
-3. **Bend the wire pair.** Bend both wires together so they stay parallel. Small pliers with round jaws make the tight turns at the tips of the branches easier.
+3. **Bend the wire pair.** Cut two 60 cm pieces of 0.8 mm tin-plated copper wire. **Straighten each piece first:** hold both ends with pliers and pull until the wire stretches slightly. That makes it perfectly straight and a little stiffer. Then bend both wires together so they stay parallel. Small pliers with round jaws make the tight turns at the tips of the branches easier.
 4. **Mark the polarity.** Decide which wire is + and which is − *before* soldering.
 5. **Solder the LEDs.** Put each LED with its longer leg (anode) on the + wire. Trim the legs and solder close to the LED body so it sits upright.
 6. **Test the tree** with 3 V before you install it. A flicker LED put in backwards just stays dark.
