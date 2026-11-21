@@ -71,8 +71,8 @@ Board size, mounting holes and pad positions: [`hardware/BOM.md`](hardware/BOM.m
 | 2 + 2 | AAA battery contacts: 2× spring plate (−), 2× flat plate (+) | 9 × 14 mm, with solder tab. [AliExpress](https://www.aliexpress.com/item/32884289489.html) |
 | 2 | Machine screw M2 × 8 (or M2 × 12), countersunk, Phillips | Battery cover (DIN 965 / ISO 7046), screwed into heat-set inserts |
 | 2 | Heat-set insert M2 (Ø 3.0 mm outside, 3 or 4 mm long) | Melted into the printed part for the battery cover screws |
-| ~30 cm | Hook-up wire AWG 28 (Ø ≈ 0.32 mm) | Battery holder to J1/J5, switch to J4/J8, link between the two cells |
-| 2 | Self-tapping screw M2 × TODO, Phillips | Switch mounting ears |
+| — <!-- TODO: length --> | Stranded wire AWG 28 (Ø ≈ 0.32 mm), silicone insulation | Battery holder to J1/J5, switch to J4/J8, link between the two cells. Silicone doesn't melt when you solder |
+| 2 | Self-tapping screw M2 × 5, Phillips | Switch mounting ears |
 | 2 | Split lock washer M2 (spring washer, DIN 127) | Under the switch screws |
 | 4 | Self-tapping screw M2 × 6, Phillips | PCB (4 mounting holes, Ø 2.1 mm), screwed straight into the printed base |
 | 1 | Base + battery holder + cover | 3D printed, see below |
@@ -116,7 +116,7 @@ The `.3mf` files in `mechanics/print-profiles/` are set up for a **Bambu Lab H2D
 4. **Mark the polarity.** Decide which wire is + and which is − *before* soldering.
 5. **Solder the LEDs.** Put each LED with its longer leg (anode) on the + wire. Trim the legs and solder close to the LED body so it sits upright.
 6. **Test the tree** with 3 V before you install it. A flicker LED put in backwards just stays dark.
-7. **Install:** push the wire ends through the base and solder them to J2/J3 (−) and J6/J7 (+). Then screw the slide switch into the base by its mounting ears, wire it to J4/J8, and connect the battery holder to J1 (−) and J5 (+), screw the PCB in place and close the battery cover.
+7. **Install:** push the wire ends through the base and solder them to J2/J3 (−) and J6/J7 (+). Then screw the slide switch into the base by its mounting ears, wire it to J4/J8 (tin the stranded wire ends before soldering), and connect the battery holder to J1 (−) and J5 (+), screw the PCB in place and close the battery cover.
 
 <!-- TODO: add photos for each step, or link chapter timestamps from the video -->
 

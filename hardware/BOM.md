@@ -28,15 +28,15 @@ Order the PCB from `hardware/gerber/`, **or** build it on a piece of perfboard (
 | 2 | AAA battery | 3 V |
 | 2 | Battery contact, spring plate (−) | 9 × 14 mm, nickel-plated, with solder tab. Source: [AliExpress](https://www.aliexpress.com/item/32884289489.html) |
 | 2 | Battery contact, flat plate (+) | 9 × 14 mm, nickel-plated, with solder tab. Same listing |
-| — | Short wire link, AWG 28 | Connects the two cells in series (− of cell 1 to + of cell 2) |
+| — | Short wire link, AWG 28 stranded, silicone insulation | Connects the two cells in series (− of cell 1 to + of cell 2) |
 | 1 | Base (`Housing`) | 3D printed, `mechanics/print-profiles/Base-*.3mf` |
 | 1 | Battery holder (`Body1`) + cover (`BatteryCover`) | 3D printed, `mechanics/print-profiles/BatteryHolderCover-*.3mf` |
 | 2 | Machine screw M2 × 8 (or M2 × 12), countersunk, Phillips | Battery cover. DIN 965 / ISO 7046, screwed into heat-set inserts |
 | 2 | Heat-set insert M2 (Ø 3.0 mm outside, 3 or 4 mm long) | Melted into the printed part for the battery cover screws |
-| 2 | Self-tapping screw M2 × TODO, Phillips | Switch mounting ears |
+| 2 | Self-tapping screw M2 × 5, Phillips | Switch mounting ears |
 | 2 | Split lock washer M2 (spring washer, DIN 127) | Under the switch screws |
 | 4 | Self-tapping screw M2 × 6, Phillips | PCB (4 mounting holes, Ø 2.1 mm), screwed straight into the printed base |
-| — | Hook-up wire AWG 28 (Ø ≈ 0.32 mm) | Battery holder to J1/J5 and switch to J4/J8 |
+| — | Stranded wire AWG 28 (Ø ≈ 0.32 mm), silicone insulation | Battery holder to J1/J5 and switch to J4/J8. Tin the ends before soldering. Silicone doesn't melt when you solder. TODO: length |
 
 ## Electrical notes
 
