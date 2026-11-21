@@ -1,0 +1,16 @@
+# Private files, never publish
+do_not_publish/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Slicer output (share 3MF/STL, not machine-specific gcode)
+*.gcode
+*.bgcode
+*.gcode.3mf
+
+# CAD / EDA backups
+*.f3d.bak
+*.bak
+~$*

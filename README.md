@@ -1,0 +1,108 @@
+# LittleChristmasTree
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![3D Printed](https://img.shields.io/badge/3D-Printed-orange)
+![EasyEDA](https://img.shields.io/badge/PCB-EasyEDA%20Pro-1E90FF)
+![Bambu Studio](https://img.shields.io/badge/Slicer-Bambu%20Studio-00AE42)
+![No firmware](https://img.shields.io/badge/Firmware-none%20needed-lightgrey)
+
+A small desk Christmas tree made of bent wire, eleven flickering LEDs and a 3D-printed "snow" base. The wire is both the frame and the circuit. No microcontroller, no firmware, just a switch, a resistor and two batteries.
+
+<p align="center">
+  <img src="images/tree.jpg" width="45%" alt="LittleChristmasTree, unlit" />
+  <img src="images/flicker.gif" width="35%" alt="LittleChristmasTree, LEDs flickering" />
+</p>
+
+▶️ **Build video:** [youtube.com/@forgevolt](https://youtube.com/@forgevolt) <!-- TODO: replace with the direct video link -->
+
+---
+
+## How it works
+
+The tree outline is bent from **two parallel bare wires** that run a few millimetres apart, up one side, over the top and down the other. One wire is **+**, the other is **−**. Each LED is soldered straight across the pair, so all 11 LEDs sit **in parallel** on the two rails.
+
+The LEDs are **self-flickering "candle" LEDs**. A tiny controller chip inside each LED makes it flicker on its own, so every light flickers out of step with the others and no extra electronics are needed.
+
+A small PCB (30.5 × 20 mm) inside the base connects everything:
+
+<p align="center"><img src="images/schematic.png" width="70%" alt="Schematic" /></p>
+
+| Pad | Connects to |
+|---|---|
+| J1 / J5 | Battery − / + |
+| J2 / J3 | Tree **−** rail (both wire ends) |
+| J6 / J7 | Tree **+** rail (both wire ends), switched |
+| J4 / J8 | Slide switch SW1 |
+| R1 33 Ω | One series resistor that limits the current for all LEDs |
+
+Full schematic: [`hardware/schematic.pdf`](hardware/schematic.pdf)
+
+## Repository layout
+
+| Path | Contents |
+|---|---|
+| `hardware/schematic.pdf` | Schematic |
+| `hardware/easyeda/` | EasyEDA Pro project (`.epro2`) |
+| `hardware/gerber/` | Gerber files, ready to order (e.g. JLCPCB) |
+| `hardware/BOM.md` | Bill of materials |
+| `mechanics/print-profiles/` | Bambu Studio projects (`.3mf`) for the base and battery holder, PLA and ABS-GF variants |
+| `mechanics/stl/` | STL files for other slicers |
+| `mechanics/cad/` | CAD source files |
+| `images/` | Photos and renders used in this README |
+
+## Bill of materials
+
+| Qty | Part | Notes |
+|---:|---|---|
+| 11 | 3 mm flicker LED, clear lens, warm white / amber | Self-flickering "candle" type |
+| 1 | Resistor 33 Ω, 0805 | KOA RK73H2ATTD33R0F, LCSC [C317229](https://www.lcsc.com/product-detail/C317229.html) |
+| 1 | Slide switch | Kinghelm KH-SS12F17-G5, LCSC [C5274464](https://www.lcsc.com/product-detail/C5274464.html) |
+| 8 | Header pin 1×1, 2.54 mm (optional) | LCSC [C81276](https://www.lcsc.com/product-detail/C81276.html). Wires can also be soldered straight to the pads |
+| 1 | PCB, 30.5 × 20 mm | `hardware/gerber/` |
+| ~2 m | Bare wire, Ø TODO mm | Stiff enough to hold its shape |
+| 2 | AAA battery | 3 V total <!-- TODO: confirm battery type --> |
+| — | Screws | TODO: size and quantity for the PCB and the battery cover |
+| 1 | Base + battery holder + cover | 3D printed, see below |
+
+Details and notes: [`hardware/BOM.md`](hardware/BOM.md)
+
+## 3D printing
+
+<p align="center">
+  <img src="images/base-render.png" width="40%" alt="Base" />
+  <img src="images/battery-holder-render.png" width="40%" alt="Battery holder and cover" />
+</p>
+
+| Part | Size | Profile |
+|---|---|---|
+| Base (`Housing`) | 69 × 42 × 27.6 mm | 0.20 mm Standard, 4 walls, 15% gyroid, ironing on the topmost surface, no supports |
+| Battery holder (`Body1`) + cover (`BatteryCover`) | 51 × 24 × 12 mm / 63 × 26 × 1.4 mm | 0.16 mm Balanced Quality, 4 walls, 15% gyroid, no supports |
+
+The `.3mf` files in `mechanics/print-profiles/` are set up for a **Bambu Lab H2D** with a 0.4 mm nozzle. Each part comes in two versions: **PLA** (Bambu PLA Basic) and **ABS-GF**.
+
+**The snow texture** on the side of the base is **painted fuzzy skin**. It's painted onto the model in Bambu Studio, so the global fuzzy-skin setting stays *off*. The 3MF files already include the painting. If you print from an STL in another slicer, turn fuzzy skin on for the outer wall only (thickness 0.3 mm, point distance 0.8 mm).
+
+## Build steps
+
+1. **Order the PCB** from the Gerber files and solder R1, SW1 and (optionally) the header pins.
+2. **Print** the base, the battery holder and the cover.
+3. **Bend the wire pair.** Bend both wires together so they stay parallel. Small pliers with round jaws make the tight turns at the tips of the branches easier.
+4. **Mark the polarity.** Decide which wire is + and which is − *before* soldering.
+5. **Solder the LEDs.** Put each LED with its longer leg (anode) on the + wire. Trim the legs and solder close to the LED body so it sits upright.
+6. **Test the tree** with 3 V before you install it. A flicker LED put in backwards just stays dark.
+7. **Install:** push the wire ends through the base and solder them to J2/J3 (−) and J6/J7 (+). Then connect the battery holder to J1 (−) and J5 (+), screw the PCB in place and close the battery cover.
+
+<!-- TODO: add photos for each step, or link chapter timestamps from the video -->
+
+## Safety notes
+
+- The wires are bare. That's harmless at 3 V, but a metal object across both rails will short the battery (R1 doesn't protect against that). Switch the tree off when you aren't watching it, and don't use it as a toy for small children.
+- Don't run it at a higher voltage without changing R1.
+
+## License
+
+[MIT](LICENSE) © ForgeVolt
+
+---
+
+*Build. Test. Improve. Share.* — [ForgeVolt](https://github.com/forgevolt)
