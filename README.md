@@ -53,8 +53,9 @@ Board size, mounting holes and pad positions: [`hardware/BOM.md`](hardware/BOM.m
 | `hardware/gerber/` | Gerber files, ready to order (e.g. JLCPCB). Optional: perfboard works too |
 | `hardware/BOM.md` | Bill of materials |
 | `mechanics/print-profiles/` | Bambu Studio projects (`.3mf`) for the base and battery holder, PLA and ABS-GF variants |
-| `mechanics/stl/` | STL files for other slicers |
-| `mechanics/cad/` | CAD source files |
+| `mechanics/stl/` | STL files for other slicers: `Housing`, `BatteryHolder`, `BatteryCover` |
+| `mechanics/stl/jigs/` | STL files for the bending and soldering jigs |
+| `mechanics/cad/` | Fusion 360 source file (`LittleChristmasTree.f3d`) |
 | `images/` | Photos and renders used in this README |
 
 ## Bill of materials
@@ -105,18 +106,31 @@ The `.3mf` files in `mechanics/print-profiles/` are set up for a **Bambu Lab H2D
 
 **The snow texture** on the side of the base is **painted fuzzy skin**. It's painted onto the model in Bambu Studio, so the global fuzzy-skin setting stays *off*. The 3MF files already include the painting. If you print from an STL in another slicer, turn fuzzy skin on for the outer wall only (thickness 0.3 mm, point distance 0.8 mm).
 
+## Jigs
+
+Five printed jigs make the wire tree accurate and repeatable. The STL files are in [`mechanics/stl/jigs/`](mechanics/stl/jigs/).
+
+| | Jig | Used for |
+|---|---|---|
+| <img src="images/jigs/BendingJig.png" width="120" alt="Bending jig" /> | **Bending jig**<br/>`BendingJig.stl` | Bend the wire pair into the Christmas tree shape |
+| <img src="images/jigs/TreeJig.png" width="120" alt="Tree jig" /> | **Tree jig**<br/>`TreeJig.stl` | Holds the bent wire for the final shaping |
+| <img src="images/jigs/TreeNegativeJig.png" width="80" alt="Tree negative jig" /> | **Tree negative**<br/>`TreeNegativeJig.stl` | Pressed onto the wire in the tree jig to make the shape exact |
+| <img src="images/jigs/SolderingJig.png" width="120" alt="Soldering jig" /> | **Soldering jig**<br/>`SolderingJig.stl` | Holds the tree and the LEDs while you solder them to the wire |
+| <img src="images/jigs/StandoffGuideJig.png" width="90" alt="Standoff guide" /> | **Standoff guide**<br/>`StandoffGuideJig.stl` | Keeps a defined distance when you solder the tree to the PCB |
+
 ## Build steps
 
 1. **Make the board.** Either order the PCB from the Gerber files, or use a piece of perfboard (prototype board): cut it to 30.48 × 20 mm (12 holes wide on standard 2.54 mm perfboard, about 8 holes tall), drill the mounting holes ([positions](hardware/BOM.md#board-dimensions)) and wire it by hand following the schematic. Then solder R1 and (optionally) the header pins. On perfboard a through-hole 33 Ω resistor is easier to solder than the 0805 SMD part.
 
    > **Tip:** When you order the PCB, panelize it. 5 × 4 = 20 boards per panel cost almost nothing extra, which is enough for *many* Christmas trees.
 
-2. **Print** the base, the battery holder and the cover. Then press the two M2 heat-set inserts for the battery cover screws into place with a soldering iron.
-3. **Bend the wire pair.** Cut two 60 cm pieces of 0.8 mm tin-plated copper wire. **Straighten each piece first:** hold both ends with pliers and pull until the wire stretches slightly. That makes it perfectly straight and a little stiffer. Then bend both wires together so they stay parallel. Small pliers with round jaws make the tight turns at the tips of the branches easier.
-4. **Mark the polarity.** Decide which wire is + and which is − *before* soldering.
-5. **Solder the LEDs.** Put each LED with its longer leg (anode) on the + wire. Trim the legs and solder close to the LED body so it sits upright.
-6. **Test the tree** with 3 V before you install it. A flicker LED put in backwards just stays dark.
-7. **Install:** push the wire ends through the base and solder them to J2/J3 (−) and J6/J7 (+). Then screw the slide switch into the base by its mounting ears, wire it to J4/J8 (tin the stranded wire ends before soldering), and connect the battery holder to J1 (−) and J5 (+), screw the PCB in place and close the battery cover.
+2. **Print** the base, the battery holder, the cover and the five jigs. Then press the two M2 heat-set inserts for the battery cover screws into place with a soldering iron.
+3. **Bend the wire pair.** Cut two 60 cm pieces of 0.8 mm tin-plated copper wire. **Straighten each piece first:** hold both ends with pliers and pull until the wire stretches slightly. That makes it perfectly straight and a little stiffer. Then bend both wires together into the tree shape using the **bending jig**, so they stay parallel. Small pliers with round jaws make the tight turns at the tips of the branches easier.
+4. **Shape it exactly.** Put the bent wire into the **tree jig** and press the **tree negative** onto it. This makes the shape exact.
+5. **Mark the polarity.** Decide which wire is + and which is − *before* soldering.
+6. **Solder the LEDs.** Place the tree and the LEDs in the **soldering jig**. Put each LED with its longer leg (anode) on the + wire. Trim the legs and solder close to the LED body so it sits upright.
+7. **Test the tree** with 3 V before you install it. A flicker LED put in backwards just stays dark.
+8. **Install:** push the wire ends through the base and solder them to J2/J3 (−) and J6/J7 (+). Use the **standoff guide** to keep a defined distance between the tree and the PCB. Then screw the slide switch into the base by its mounting ears, wire it to J4/J8 (tin the stranded wire ends before soldering), and connect the battery holder to J1 (−) and J5 (+), screw the PCB in place and close the battery cover.
 
 <!-- TODO: add photos for each step, or link chapter timestamps from the video -->
 
