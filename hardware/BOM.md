@@ -42,6 +42,8 @@ Order the PCB from `hardware/gerber/`, **or** build it on a piece of perfboard (
 
 ## Board dimensions
 
+<p align="center"><img src="../images/board-dimensions.svg" width="80%" alt="Board dimensions" /></p>
+
 Board: **30.48 × 20 mm**, corner radius 2 mm. Positions are measured from the **bottom-left corner**, looking at the side with the labels (battery −/+ on the left, SW on the right).
 
 | Hole | Ø | X | Y |

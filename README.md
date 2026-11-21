@@ -40,6 +40,10 @@ A small board (30.48 × 20 mm) inside the base connects everything. You can orde
 
 Full schematic: [`hardware/schematic.pdf`](hardware/schematic.pdf)
 
+<p align="center"><img src="images/board-dimensions.svg" width="70%" alt="Board dimensions: 30.48 × 20 mm, four Ø 2.1 mm mounting holes" /></p>
+
+Board size, mounting holes and pad positions: [`hardware/BOM.md`](hardware/BOM.md#board-dimensions)
+
 ## Repository layout
 
 | Path | Contents |
