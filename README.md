@@ -13,7 +13,7 @@ A small desk Christmas tree made of bent wire, eleven flickering LEDs and a 3D-p
   <img src="images/flicker.gif" width="40%" alt="LittleChristmasTree, LEDs flickering" />
 </p>
 
-▶️ **Build video:** [youtube.com/@forgevolt](https://youtube.com/@forgevolt) <!-- TODO: replace with the direct video link -->
+▶️ **YouTube Short:** [Let It Glow – DIY Wire Christmas Tree](https://youtube.com/shorts/buTyDkAZyXY) · Full build video coming soon on [@forgevolt](https://youtube.com/@forgevolt) <!-- TODO: add the full build video link -->
 
 ---
 
